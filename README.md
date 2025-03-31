@@ -1,0 +1,2 @@
+# Source
+[Introduction to zig - a project based book](https://www.amazon.com/Introduction-project-based-Pedro-Duarte-Faria-ebook/dp/B0DJYMDRLP/ref=sr_1_1?crid=2C37692404T6P&dib=eyJ2IjoiMSJ9.uGJh3oMGbA85U6PI_xsqxEsVRelutikjfPdNLkPthf2j76WZctd6PrUdezNVrEIrloKLbRxBNJDhwGjQfAR7y_xjuiQvsoNUH6GkFeIX1rp_0KS141uX3lOg_QZZ7SqyHln1XJF9c8F_aa8coFobJc5Q6vibQK9G8uiW9t4a1kTMD3-66sNsvhlnvpjlt89YOT7JxNZfo45Q7dGFZqpleeQtnCoC6UBcY5nzvez-tf8.cecMkiMFYadS08f3AdNezzMlD5tUywkdIhLjG2fc3cI&dib_tag=se&keywords=introduction+to+zig&qid=1743422998&sprefix=introduction+to+zi%2Caps%2C378&sr=8-1)
