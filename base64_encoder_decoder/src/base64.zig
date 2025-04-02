@@ -1,3 +1,5 @@
+const std = @import("std");
+
 pub const Base64 = struct {
     _table: *const [64]u8,
 
