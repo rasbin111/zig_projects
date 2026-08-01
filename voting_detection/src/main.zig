@@ -27,10 +27,22 @@ pub fn main(init: std.process.Init) !void {
     var stdin_file_reader = stdin.reader(init.io, &stdin_buffer);
     var reader = &stdin_file_reader.interface;
 
-    const age_str = try reader.takeDelimiterExclusive('\n');
-    const age = try std.fmt.parseInt(u8, age_str, 10);
+    try stdout_writer.print("**Welcome to Voter Detection System**", .{});
+    var age_str: []u8 = undefined;
+    var age: u8 = undefined;
+    var pdChar: []u8 = undefined;
+    while (std.mem.eql(u8, pdChar, "y") || std.mem.eql(u8, pdChar, "Y")) {
+        try stdout_writer.print("Please enter your age: ", .{});
+        age_str = try reader.takeDelimiterExclusive('\n');
+        age = try std.fmt.parseInt(u8, age_str, 10);
 
-    try stdout_writer.print("Your age is: {}", .{age});
+        if (age < 18) {
+            try stdout_writer.print("Sorry you have to wait {d} more years to vote", .{18 - age});
+        }
+
+        try stdout_writer.print("Do you want to continue? (y/n)", .{});
+        pdChar = try reader.takeDelimiterExclusive('\n');
+    }
 
     try stdout_writer.flush(); // Don't forget to flush!
 }
