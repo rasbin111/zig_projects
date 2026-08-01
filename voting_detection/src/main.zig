@@ -30,7 +30,7 @@ pub fn main(init: std.process.Init) !void {
     try stdout_writer.print("**Welcome to Voter Detection System**", .{});
     var age_str: []u8 = undefined;
     var age: u8 = undefined;
-    var pdChar: []u8 = undefined;
+    var pdChar: []const u8 = "y";
     while (std.mem.eql(u8, pdChar, "y") || std.mem.eql(u8, pdChar, "Y")) {
         try stdout_writer.print("Please enter your age: ", .{});
         age_str = try reader.takeDelimiterExclusive('\n');
