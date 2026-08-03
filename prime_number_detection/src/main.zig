@@ -3,7 +3,11 @@ const Io = std.Io;
 
 const io_utils = @import("io_utils.zig");
 
-pub fn detect_prime(num: u32) bool {
+pub fn check_prime(num: u32) bool {
+    // return true if prime, else return false
+    if (num == 1) {
+        return true;
+    }
     var isPrime = true;
     for (2..num) |i| {
         if (num % i == 0) {
@@ -39,10 +43,10 @@ pub fn main(init: std.process.Init) !void {
 
         num = try std.fmt.parseInt(u32, num_str, 10);
 
-        const isPrime = detect_prime(num);
+        const isPrime = check_prime(num);
 
         if (isPrime) {
-            try writer.print("Is a prime number\n", .{});
+            try writer.print("Is a prime number\n\n", .{});
             try writer.flush();
         } else {
             try writer.print("Not a prime number\n\n", .{});
