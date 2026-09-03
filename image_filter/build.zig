@@ -22,8 +22,10 @@ pub fn build(b: *std.Build) void {
                 .{ .name = "image_filter", .module = mod },
             },
         }),
+        .use_llvm = true,
+        .use_lld = true,
     });
-    exe.root_module.linkSystemLibrary("png", .{});
+    exe.root_module.linkSystemLibrary("spng", .{});
     b.installArtifact(exe);
 
     const run_step = b.step("run", "Run the app");
